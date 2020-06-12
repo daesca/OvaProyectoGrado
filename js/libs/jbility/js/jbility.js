@@ -43,41 +43,20 @@ jQuery(document).ready(function( $ ){
 	/*======================================
 	*		jBility functions
 	*======================================*/
-	function addConstrast(){
-  	console.log('addConstrast');
-    $('*').addClass('pagina-acessivel');
-    $('.acess-container').addClass('f-transparent');
-    $('#botao').addClass('f-transparent');
-    $('#acess-icons').addClass('f-transparent');
-    $('.acess-icon').addClass('f-transparent');
-    $('img').addClass('f-transparent');
-    $('#jbbutton').addClass('f-transparent');
-  }
 
-  function removeConstrast(){
+  function constrast(){
     console.log('removeConstrast');
-    $('*').removeClass('pagina-acessivel');
+    $('*').toggleClass('pagina-acessivel');
     $('.acess-container').removeClass('f-transparent');
-    $('#botao').removeClass('f-transparent');
-    $('#acess-icons').removeClass('f-transparent');
-    $('.acess-icon').removeClass('f-transparent');
-    $('img').removeClass('f-transparent');
-    $('#jbbutton').removeClass('f-transparent');
-  }
-
-  if(checkCookie('ccontrast')){
-  	addConstrast();
+    $('#botao').toggleClass('f-transparent');
+    $('#acess-icons').toggleClass('f-transparent');
+    $('.acess-icon').toggleClass('f-transparent');
+    $('img').toggleClass('f-transparent');
+    $('#jbbutton').toggleClass('f-transparent');
   }
 
   $('#contrast').click(function(){
-  	var ck = checkCookie('ccontrast');
-	  if(ck){
-	  	deleteCookie('ccontrast');
-	    removeConstrast();
-	  }else{
-	    createCookie('ccontrast', 'cookieContrast');
-	    addConstrast();
-	  }
+	  constrast();
   });
 
 	var $cElements = $("body").find("*");

@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+#ova-container {
+    margin: 2em auto;
+    width: 800px;
+    display: flex;
+    border: 1px solid #000;
+    position: relative;
+}
+
+.left-side {
+    width: 20%;
+    border: 1px solid #000
+}
+
+.right-side {
+    width: 80%;
+}
+
+.right-side>div {
+    display: none;
+}
+
+.right-side>div.show {
+    display: block;
+}
+
+.main-menu {
+    list-style: none;
+}
+
+.acess-container {
+    position: absolute;
+    width: 50px;
+    border: 2px solid #000;
+    height: 150px;
+    right: 0;
+    margin-left: auto;
+    top: 0;
+}
+
+.acess-controls {
+    display: flex !important;
+    flex-direction: column;
+    float: none !important;
+    text-align: center;
+}
+
+
+/*Indice*/
+
+.indice {
+    display: flex;
+    justify-content: space-around;
+}
+
+.indice.hidde {
+    display: none;
+}
+
+.item-indice {
+    height: 200px;
+    border: 2px solid;
+    border-radius: 10px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.content>div {
+    display: none;
+}
+
+.content>div.show {
+    display: block;
+}
+
+
+/*Buttons*/
+
+.back-btn {}

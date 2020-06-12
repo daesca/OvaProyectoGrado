@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OVA</title>
+    <link rel="stylesheet" href="./css/libs/jbility/jbility.min.css">
+    <link rel="stylesheet" href="./css/general.css">
+</head>
+
+<body>
+    <div id="ova-container">
+        <div class="acess-container">
+            <!-- <div id="jbbutton" class="balloon" title="Accessibility"><span class="balloontext">Accesibilidad</span><img src="img/libs/jbility/acessc50.png"></div> -->
+            <div id="acess-icons" class="acess-controls">
+                <div class="acess-icon balloon"><span class="balloontext">Contraste</span><img id="contrast" src="img/libs/jbility/contraste40.png" /></div>
+                <div class="acess-icon balloon"><span class="balloontext">Incrementar Fuente</span><img id="increaseFont" src="img/libs/jbility/fontsma40.png" /></div>
+                <div class="acess-icon balloon"><span class="balloontext">Disminuir Fuente</span><img id="decreaseFont" src="img/libs/jbility/fontsme40.png" /></div>
+            </div>
+        </div>
+        <div class="left-side">
+            <nav>
+                <ul class="main-menu">
+                    <li>
+                        <a href="javascript:void(0)"></a>
+                    </li>
+                    <li><a href="javascript:void(0)" data-target="#explora" onclick="showIndice(this)">Explora</a></li>
+                    <li><a href="javascript:void(0)" data-target="#explica" onclick="showIndice(this)">Explica</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="right-side">
+            <div id="explora" class="show">
+                <div class="indice">
+                    <div class="item-indice" data-target="#video" onclick="showContent(this)">
+                        <h3 title="Video: UDL de un vistazo">Video: UDL de un vistazo</h3>
+                    </div>
+                    <div class="item-indice" data-target="#activityDaD">
+                        <h3 title="Actividad">Relacione los conceptos</h3>
+                    </div>
+                </div>
+                <div class="content">
+                    <div id="video">
+
+                        <a href="javascript:void(0)" class="back-btn" data-target="#explora" title="Volver" onclick="back(this)">Volver</a>
+                        <div>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/KNbHew448yE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+
+                    </div>
+                    <div id="activityDaD">
+                        <p>Esta es la actividad</p>
+                    </div>
+                </div>
+            </div>
+            <div id="explica">
+                Hola desde "Explica"
+            </div>
+        </div>
+    </div>
+    <script src="js/libs/jquery.js"></script>
+    <script src="js/libs/jbility/js/jbility.min.js"></script>
+    <!-- <script src="js/libs/draggable/index.js"></script> -->
+    <script>
+        function showIndice(element) {
+
+            let themes = document.querySelectorAll(".right-side > div");
+            // console.log(themes);
+            for (let x = 0; x < themes.length; x++) {
+
+                themes[x].classList.remove('show');
+
+            }
+            document.querySelector(element.getAttribute('data-target')).classList.add('show');
+
+        }
+
+        function showContent(element) {
+
+            // console.log(element.getAttribute('data-target'));
+            // let parent = element.parentNode;
+            console.log(element.parentNode);
+            let idContentElement = element.getAttribute('data-target');
+            document.querySelector(".indice").classList.add('hidde');
+            document.querySelector(idContentElement).classList.add('show');
+
+
+        }
+
+        function back(element) {
+
+            let returnToIndice = element.getAttribute('data-target');
+            element.parentNode.classList.remove('show');
+
+            document.querySelector(returnToIndice + " > div.indice ").classList.remove('hidde');
+
+        }
+    </script>
+</body>
+
+</html>

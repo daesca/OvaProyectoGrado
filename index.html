@@ -55,48 +55,34 @@
                 </div>
             </div>
             <div id="explica">
-                Hola desde "Explica"
+                <div class="indice">
+                    <div class="item-indice" data-target="#video" onclick="showContent(this)">
+                        <h3 title="Video: UDL de un vistazo" alt="DUA: Diseño Universal para el Aprendizaje">DUA: Diseño Universal para el Aprendizaje</h3>
+                    </div>
+                    <div class="item-indice" data-target="#activityDaD">
+                        <h3 title="Actividad" title="Actividad Cerebros">Actividad Cerebros</h3>
+                    </div>
+                </div>
+                <div class="content">
+                    <div id="video">
+
+                        <a href="javascript:void(0)" class="back-btn" data-target="#explora" title="Volver" onclick="back(this)">Volver</a>
+                        <div>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/KNbHew448yE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+
+                    </div>
+                    <div id="activityDaD">
+                        <p>Esta es la actividad</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <script src="js/libs/jquery.js"></script>
     <script src="js/libs/jbility/js/jbility.min.js"></script>
     <!-- <script src="js/libs/draggable/index.js"></script> -->
-    <script>
-        function showIndice(element) {
-
-            let themes = document.querySelectorAll(".right-side > div");
-            // console.log(themes);
-            for (let x = 0; x < themes.length; x++) {
-
-                themes[x].classList.remove('show');
-
-            }
-            document.querySelector(element.getAttribute('data-target')).classList.add('show');
-
-        }
-
-        function showContent(element) {
-
-            // console.log(element.getAttribute('data-target'));
-            // let parent = element.parentNode;
-            console.log(element.parentNode);
-            let idContentElement = element.getAttribute('data-target');
-            document.querySelector(".indice").classList.add('hidde');
-            document.querySelector(idContentElement).classList.add('show');
-
-
-        }
-
-        function back(element) {
-
-            let returnToIndice = element.getAttribute('data-target');
-            element.parentNode.classList.remove('show');
-
-            document.querySelector(returnToIndice + " > div.indice ").classList.remove('hidde');
-
-        }
-    </script>
+    <script src="js/general.js"></script>
 </body>
 
 </html>

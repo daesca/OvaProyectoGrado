@@ -46,7 +46,9 @@ p, li, ol {
     position: relative;
     box-shadow: 0px 0px 10px #747474;
 }
-
+#principios_resumen {
+    height: 100%;
+}
 .left-side {
     width: 20%;
     border-right: 1px solid #747474;
@@ -59,6 +61,7 @@ p, li, ol {
     text-align: center;
     padding: .5rem;
     border-bottom: 1px solid #747474;
+    box-sizing: border-box;
 }
 .logo img  {
     width: 120px;
@@ -154,6 +157,66 @@ p, li, ol {
 .back-btn {}
 
 /* Helpers */
+.content-cerebros-redes {
+    justify-content: center;
+}
+.content-cerebros-redes > div.content-cerebro-red  {
+    flex: auto;
+    width: 33.99999%;;
+}
 .content-video iframe {
+    margin: 1rem auto;
+    display: block;
+}
+.cerebro-descripcion {
+    width: 300px;
+    cursor: pointer;
+    margin: 2rem 0;
+}
+.cerebro-redes {
+    width: 250px;
+    cursor: pointer;
+    display: block;
     margin: 0 auto;
+}
+.contenedor-principios {
+    height: 80%;
+    align-items: center;
+}
+.content-arrow-link {
+    display: inline-block;
+    width: fit-content;
+    background-color: #076633;
+    color: white;
+    padding: .5rem 1rem;
+    position: relative;
+}
+.content-arrow-link:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -32px;
+    width: 0;
+    height: 0;
+    border-width: 16px;
+    border-style: solid;
+    border-color: transparent transparent transparent #076633;
+}
+.center {
+    margin: auto;
+}
+.t-center {
+    text-align: center;
+}
+.flex{
+    display: flex;
+}
+.j-center {
+    justify-content: center;
+}
+.d-col {
+    flex-direction: column;
+}
+.a-i-center{
+    align-items: center;
 }

@@ -25,7 +25,7 @@
                     </li>
                     <li><a href="javascript:void(0)" data-target="#explora" onclick="showIndice(this)" title="Ir a la sección" tabindex="1">Explora</a></li>
                     <li><a href="javascript:void(0)" data-target="#explica" onclick="showIndice(this)" title="Ir a la sección" tabindex="1">Explica</a></li>
-                    <li><a href="javascript:void(0)" data-target="#principios" onclick="showIndice(this)" title="Ir a la sección" tabindex="1">Principios DUA</a></li>
+                    <li><a href="javascript:void(0)" data-target="#pautas" onclick="showIndice(this)" title="Ir a la sección" tabindex="1">Pautas DUA</a></li>
                 </ul>
             </nav>
             <div class="acess-container">
@@ -39,7 +39,6 @@
         </div>
         <div class="right-side">
             <div id="introduccion" class="show">
-                <div class="indice" style="display: block;">
                     <h1 tabindex="2">Introducción</h1>
                     <p>
 
@@ -63,20 +62,6 @@
                             Realizar una caracterización de la Práctica Pedagógica bajo los principios y las pautas del DU
                         </li>
                     </ul>
-                </div>
-                <div class="content">
-                    <div id="video">
-
-                        <a href="javascript:void(0)" class="back-btn" data-target="#explora" title="Volver" onclick="back(this)">Volver</a>
-                        <div class="content-video">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/KNbHew448yE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-
-                    </div>
-                    <div id="activityDaD">
-                        <p>Esta es la actividad</p>
-                    </div>
-                </div>
             </div>
             <div id="explora">
                 <h2 tabindex="2">Introducción para el video</h2>
@@ -86,10 +71,15 @@
                     pares y docentes, con el aprendizaje entre otros. Desde esta perspectiva, se puede afirmar que el reto del maestro es mayúsculo cuando se trata de responder con equidad y calidad a dicha diversidad.
                 </p>
 
-                <div>
-                    <iframe alt="Video sobre Diseño Universal para el Aprendizaje DUA" width="560" height="315" src="https://www.youtube.com/embed/KNbHew448yE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="content-video">
+                    <iframe title="Video sobre Diseño Universal para el Aprendizaje DUA" width="560" height="315" src="https://www.youtube.com/embed/KNbHew448yE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <a href="javascript:void(0)" data-target="#emparejamiento" onclick="showIndice(this)" title="Ir a la Actividad">Emparejamiento</a>
+                <div class="flex j-center">
+                    <a class="content-arrow-link center"
+                       href="javascript:void(0)"
+                       data-target="#emparejamiento"
+                       onclick="showIndice(this)" title="Ir a la Actividad">Ir actividad de emparejamiento</a>
+                </div>
 
             </div>
             <div id="emparejamiento">
@@ -159,79 +149,91 @@
                 <p>
                     Es un conjunto de principios y estrategias que incrementan las posibilidades de aprendizaje y la orientan al <b>Maestro</b> en formulación de metodologías flexibles teniendo en cuenta la <b>DIVERSIDAD EN EL AULA</b>.
                 </p>
-                <img src="img/cerebro.png" alt="Imagen de Cerebro Humano" />
-                <span>
-                    [Tooltip] En la corteza cerebral se
-                    encuentran aproximadamente
-                    1 billón de neuronas unidas
-                    por conexiones que
-                    comunican a todo el cerebro,
-                    Dentro de esta gran red se
-                    distinguen <b>tres redes
-                    primarias</b>.
-                </span>
-                <div>
-                    [Tooltip]
-                    <h3>
-                        Las redes de reconocimiento o representación
-                    </h3>
-                    <p>
-                        El "qué" del aprendizaje Se sitúan en la parte posterior del cerebro.
-                    </p>
-                    <ul>
-                        <li>
+                <div class="flex j-center d-col a-i-center">
+                    <img tabindex="3" src="img/cerebro.png" alt="Imagen de Cerebro Humano" class="cerebro-descripcion"/>
+                    <span>
+                        [Tooltip] En la corteza cerebral se
+                        encuentran aproximadamente
+                        1 billón de neuronas unidas
+                        por conexiones que
+                        comunican a todo el cerebro,
+                        Dentro de esta gran red se
+                        distinguen <b>tres redes
+                        primarias</b>.
+                    </span>
+                    </div>
+                <div class="content-cerebros-redes flex d-row">
+                    <div class="content-cerebro-red">
+                        <img tabindex="3" class="cerebro-redes" src="img/redConocimiento.png" alt="Imagen de cerebro representando la red de conocimiento" />
+                        [Tooltip]
+                        <h3>
+                            Las redes de reconocimiento o representación
+                        </h3>
+                        <p>
+                            El "qué" del aprendizaje Se sitúan en la parte posterior del cerebro.
+                        </p>
+                        <ul>
+                            <li>
 
-                            Identifican patrones e interpretan de sonido, luz, olfato y tacto.
-                        </li>
-                        <li>
-                            Permiten reconocer voces, rostros, letras y palabras, así como el estilo de un autor y conceptos abstractos como la justicia.
-                        </li>
-                    </ul>
-                    <img src="img/redConocimiento.png" alt="Imagen de cerebro representando la red de conocimiento" />
-                </div>
-                <div>
-                    [Tooltip]
-                    <h3>
-                        Las redes estratégicas.
+                                Identifican patrones e interpretan de sonido, luz, olfato y tacto.
+                            </li>
+                            <li>
+                                Permiten reconocer voces, rostros, letras y palabras, así como el estilo de un autor y conceptos abstractos como la justicia.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content-cerebro-red">
+                        <img tabindex="3" class="cerebro-redes" src="img/redLogica.png" alt="Imagen de cerebro representando la red lógica" />
+                        [Tooltip]
+                        <h3>
+                            Las redes estratégicas.
 
-                    </h3>
-                    <p>
-                        El “como" del aprendizaje.
+                        </h3>
+                        <p>
+                            El “como" del aprendizaje.
 
-                    </p>
-                    <p>
-                        Las redes planificar, mentalmente estratégicas ejecutar y los patrones permiten controlar de las acciones para las diferentes tareas que pueden ser consientes o inconscientes.
-                    </p>
-                    <p>
-                        Permiten diferenciar las formas en que los estudiantes pueden expresar lo que saben.
-                    </p>
-                    <img src="img/redLogica.png" alt="Imagen de cerebro representando la red lógica" />
-                </div>
-                <div>
-                    [Tooltip]
-                    <h3>
+                        </p>
+                        <p>
+                            Las redes planificar, mentalmente estratégicas ejecutar y los patrones permiten controlar de las acciones para las diferentes tareas que pueden ser consientes o inconscientes.
+                        </p>
+                        <p>
+                            Permiten diferenciar las formas en que los estudiantes pueden expresar lo que saben.
+                        </p>
+                    </div>
+                    <div class="content-cerebro-red">
+                        <img tabindex="3" class="cerebro-redes" src="img/redAfectiva.png" alt="Imagen de cerebro representando la red afectiva" />
+                        [Tooltip]
+                        <h3>
 
-                        Las redes afectivas
+                            Las redes afectivas
 
-                    </h3>
-                    <p>
-                        El “porqué" del aprendizaje
-                    </p>
-                    <p>
-                        La redes afectivas permiten atribuir un significado emocional a los estímulos, reconocer y expresar emociones e interpretar expresiones faciales y todo tipo de lenguaje expresivo.
-                    </p>
-                    <p>
-                        Se componen muchos módulos especializados ubicados principalmente en el centro del cerebro asociados con el sistema límbico.
-                    </p>
-                    <p>
-                        Dichas estructuras influyen de diversas formas en la motivación para aprender y su compromiso con las tareas de aprendizaje
-                    </p>
-                    <img src="img/redAfectiva.png" alt="Imagen de cerebro representando la red afectiva" />
+                        </h3>
+                        <p>
+                            El “porqué" del aprendizaje
+                        </p>
+                        <p>
+                            La redes afectivas permiten atribuir un significado emocional a los estímulos, reconocer y expresar emociones e interpretar expresiones faciales y todo tipo de lenguaje expresivo.
+                        </p>
+                        <p>
+                            Se componen muchos módulos especializados ubicados principalmente en el centro del cerebro asociados con el sistema límbico.
+                        </p>
+                        <p>
+                            Dichas estructuras influyen de diversas formas en la motivación para aprender y su compromiso con las tareas de aprendizaje
+                        </p>
+                    </div>
                 </div>
                 <p>
                     Basados en cada una de las 3 REDES NEURONALES se crearon 3 PRINCIPIOS que buscan eliminar las barreras en la participación y mejorar el aprendizaje significativo
                 </p>
-                <div>
+                <div class="flex j-center">
+                    <a class="content-arrow-link center"
+                       href="javascript:void(0)"
+                       data-target="#principios_resumen"
+                       onclick="showIndice(this)" title="Ir a la sección los 3 principios">Ir a los 3 principios</a>
+                </div>
+            </div>
+            <div id="principios_resumen">
+                <div class="contenedor-principios flex d-row">
                     <div>
                         <h3>Red de conocimiento</h3>
                         <p><b>Palabra clave:</b> <span>que</span> aprendo</p>
@@ -254,8 +256,14 @@
                         </p>
                     </div>
                 </div>
+                <div class="flex j-center">
+                    <a class="content-arrow-link center"
+                       href="javascript:void(0)"
+                       data-target="#pautas"
+                       onclick="showIndice(this)" title="Ir a la sección de las pautas de DUA">Ir a las pautas de DUA</a>
+                </div>
             </div>
-            <div id="principios">
+            <div id="pautas">
                 <div>
                     <a href="javascript:void(0)" title="DUA: ">Principio 1</a>
                     <div>

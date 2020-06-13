@@ -12,15 +12,10 @@
 
 <body>
     <div id="ova-container">
-        <div class="acess-container">
-            <!-- <div id="jbbutton" class="balloon" title="Accessibility"><span class="balloontext">Accesibilidad</span><img src="img/libs/jbility/acessc50.png"></div> -->
-            <div id="acess-icons" class="acess-controls">
-                <div class="acess-icon balloon"><span class="balloontext">Contraste</span><img id="contrast" src="img/libs/jbility/contraste40.png" /></div>
-                <div class="acess-icon balloon"><span class="balloontext">Incrementar Fuente</span><img id="increaseFont" src="img/libs/jbility/fontsma40.png" /></div>
-                <div class="acess-icon balloon"><span class="balloontext">Disminuir Fuente</span><img id="decreaseFont" src="img/libs/jbility/fontsme40.png" /></div>
-            </div>
-        </div>
         <div class="left-side">
+            <div class="logo">
+                <img src="img/logo-tdea.png" alt="Logo de la institución universitaria Tecnologico de Antioquia">
+            </div>
             <nav>
                 <ul class="main-menu">
                     <li>
@@ -33,11 +28,19 @@
                     <li><a href="javascript:void(0)" data-target="#principios" onclick="showIndice(this)" title="Ir a la sección" tabindex="1">Principios DUA</a></li>
                 </ul>
             </nav>
+            <div class="acess-container">
+                <!-- <div id="jbbutton" class="balloon" title="Accessibility"><span class="balloontext">Accesibilidad</span><img src="img/libs/jbility/acessc50.png"></div> -->
+                <div id="acess-icons" class="acess-controls">
+                    <div class="acess-icon balloon"><span class="balloontext">Contraste</span><img tabindex="1" id="contrast" src="img/libs/jbility/contraste40.png" /></div>
+                    <div class="acess-icon balloon"><span class="balloontext">Incrementar Fuente</span><img tabindex="1" id="increaseFont" src="img/libs/jbility/fontsma40.png" /></div>
+                    <div class="acess-icon balloon"><span class="balloontext">Disminuir Fuente</span><img tabindex="1" id="decreaseFont" src="img/libs/jbility/fontsme40.png" /></div>
+                </div>
+            </div>
         </div>
         <div class="right-side">
             <div id="introduccion" class="show">
                 <div class="indice" style="display: block;">
-                    <h1>Introducción</h1>
+                    <h1 tabindex="2">Introducción</h1>
                     <p>
 
                         Hablar de una educación para todos que reconoce la diversidad como valor, implica que se incorpore al aula de clases estrategias orientadas a que todos los estudiantes puedan acceder, aprender, participar y promoverse de un grado a otro y de un nivel
@@ -46,12 +49,12 @@
                         flexible en el contexto de la justicia curricular.
 
                     </p>
-                    <h2>Objetivo general</h2>
+                    <h2 tabindex="2">Objetivo general</h2>
                     <p>
                         Reconocer el Diseño Universal para el Aprendizaje (DUA) y su implementación como opción metodológica flexible en el en el contexto de la justicia curricular.
                     </p>
 
-                    <h2>Objetivos específicos</h2>
+                    <h2 tabindex="2">Objetivos específicos</h2>
                     <ul>
                         <li>
                             Identificar los principios y pautas del DUA y su aplicación en la práctica pedagógica.
@@ -65,7 +68,7 @@
                     <div id="video">
 
                         <a href="javascript:void(0)" class="back-btn" data-target="#explora" title="Volver" onclick="back(this)">Volver</a>
-                        <div>
+                        <div class="content-video">
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/KNbHew448yE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
 
@@ -76,7 +79,7 @@
                 </div>
             </div>
             <div id="explora">
-                <h2>Introducción para el video</h2>
+                <h2 tabindex="2">Introducción para el video</h2>
                 <p>
                     En la lección anterior se abordaron los diferentes enfoques y perspectivas para la atención a la diversidad. También se realizó un ejercicio de caracterización para identificar la diversidad presente en el aula, superando los imaginarios que nos han llevado
                     a entender que cuando se habla de este concepto es igual que referirse a discapacidad. Así, se pudo observar que los estudiantes poseen múltiples características desde lo actitudinal y aptitudinal, desde el relacionamiento con sus
@@ -90,7 +93,7 @@
 
             </div>
             <div id="emparejamiento">
-                <h2>Actividad de emparejamiento</h2>
+                <h2 tabindex="2">Actividad de emparejamiento</h2>
                 <h3>Explicación</h3>
                 <p>
                     En el cuadro que se presenta se observan las columnas A y B. En la primera (A) se enuncia cada principio del DUA y en la segunda (B) se presenta un ejemplo de cómo se puede aplicar cada principio en el aula de clases. Arrastra con el cursor la información
@@ -152,7 +155,7 @@
                 </div>
             </div>
             <div id="explica">
-                <h2>Diseño Universal de Aprendizaje - DUA</h2>
+                <h2 tabindex="2">Diseño Universal de Aprendizaje - DUA</h2>
                 <p>
                     Es un conjunto de principios y estrategias que incrementan las posibilidades de aprendizaje y la orientan al <b>Maestro</b> en formulación de metodologías flexibles teniendo en cuenta la <b>DIVERSIDAD EN EL AULA</b>.
                 </p>

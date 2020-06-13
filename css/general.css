@@ -1,39 +1,79 @@
 body {
-    font-size: 15px;
+    font-size: 17px;
     margin: 0;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
     height: 100vh;
     background-color: #F6F6F6;
+    font-family: Arial, serif;
 }
-
+*:focus {
+    text-decoration: underline;
+}
+ul {
+    list-style: inside;
+}
+h1              { font-size: 2em; margin: .67em 0 }
+h2              { font-size: 1.5em; margin: .75em 0 }
+h3              { font-size: 1.17em; margin: .83em 0 }
+h5              { font-size: .83em; margin: 1.5em 0 }
+h6              { font-size: .75em; margin: 1.67em 0 }
+h1, h2, h3, h4,
+h5, h6          { font-weight: bolder }
+h1, h2, h3, h4, h5, h6 {
+    color: #076633;
+}
+a {
+    text-decoration: none;
+}
 a:hover,
 a:focus {
     text-decoration: underline;
+}
+img:focus {
+    outline: 1px solid #747474;
+}
+p, li, ol {
+    text-align: justify;
+    line-height: 150%;
 }
 
 #ova-container {
     margin: 2em auto;
     width: 80vw;
     display: flex;
-    border: 1px solid #000;
     position: relative;
+    box-shadow: 0px 0px 10px #747474;
 }
 
 .left-side {
     width: 20%;
-    border: 1px solid #000;
+    border-right: 1px solid #747474;
     background-color: #ffffff;
     text-decoration: none;
+    position: relative;
 }
-
+.logo  {
+    width: 100%;
+    text-align: center;
+    padding: .5rem;
+    border-bottom: 1px solid #747474;
+}
+.logo img  {
+    width: 120px;
+}
+.main-menu li {
+    border-bottom: 1px solid #747474;
+}
 .main-menu a {
     display: block;
     text-align: left;
     color: #076633;
     padding: 1rem .5rem;
-    border-bottom: 1px solid #747474;
+}
+.main-menu a:hover, .main-menu a:focus {
+    background-color: #eeeeee;
 }
 
 .main-menu a:last-child {
@@ -42,6 +82,9 @@ a:focus {
 
 .right-side {
     width: 80%;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-bottom: 65px solid #076633;
 }
 
 .right-side>div {
@@ -58,21 +101,23 @@ a:focus {
 
 .acess-container {
     position: absolute;
-    width: 50px;
-    border: 2px solid #000;
-    height: 150px;
-    right: 0;
-    margin-left: auto;
-    top: 0;
+    width: 100%;
+    border-top: 1px solid #747474;
+    height: fit-content;
+    left: 0;
+    bottom: 0;
+    padding: .5rem 0;
 }
 
 .acess-controls {
     display: flex !important;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
     float: none !important;
-    text-align: center;
 }
-
+ .acess-controls img {
+     filter: grayscale(1);
+ }
 
 /*Indice*/
 
@@ -107,3 +152,8 @@ a:focus {
 /*Buttons*/
 
 .back-btn {}
+
+/* Helpers */
+.content-video iframe {
+    margin: 0 auto;
+}

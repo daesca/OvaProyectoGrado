@@ -38,15 +38,26 @@ p, li, ol {
     text-align: justify;
     line-height: 150%;
 }
-
+b {
+    font-weight: bold;
+}
+table {
+    width: 100%;
+}
 #ova-container {
     margin: 2em auto;
     width: 80vw;
     display: flex;
     position: relative;
-    box-shadow: 0px 0px 10px #747474;
+    box-shadow: 0px 0px 10px #cccccc;
+    border-radius: 5px;
+    overflow: hidden;
 }
 #principios_resumen {
+    height: 100%;
+}
+#pautas {
+    width: 100%;
     height: 100%;
 }
 .left-side {
@@ -159,6 +170,7 @@ p, li, ol {
 /* Helpers */
 .content-cerebros-redes {
     justify-content: center;
+    position: relative;
 }
 .content-cerebros-redes > div.content-cerebro-red  {
     flex: auto;
@@ -173,6 +185,88 @@ p, li, ol {
     cursor: pointer;
     margin: 2rem 0;
 }
+.popover {
+    box-shadow: 0 0 10px #cccccc;
+    border-radius: 10px;
+    background-color: #91BF29;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 800px;
+    color: white;
+    position: absolute;
+}
+.popover b{
+    font-weight: bold;
+    color: #076633;
+}
+.none {
+    display: none;
+}
+.popover.right{
+    top: 64px;
+    right: -330px;
+}
+.popover.top {
+    top: -315px;
+}
+.popover.first {
+    top: -200px;
+}
+.popover.second {
+    top: -200px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.popover.third {
+    top: -275px;
+    right: 0;
+}
+.popover.right:after {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: -30px;
+    width: 0;
+    height: 0;
+    border-width: 15px;
+    border-style: solid;
+    border-color: transparent #91BF29 transparent transparent;
+}
+.popover.first:after {
+    content: "";
+    border-width: 15px 15px 0;
+    height: 0;
+    width: 0;
+    border-style: solid;
+    border-color: #91BF29 transparent transparent;
+    position: absolute;
+    left: 140px;
+    bottom: -15px;
+}
+.popover.second:after {
+    content: "";
+    border-width: 15px 15px 0;
+    height: 0;
+    width: 0;
+    border-style: solid;
+    border-color: #91BF29 transparent transparent;
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+}
+.popover.third:after {
+    content: "";
+    border-width: 15px 15px 0;
+    height: 0;
+    width: 0;
+    border-style: solid;
+    border-color: #91BF29 transparent transparent;
+    position: absolute;
+    right: 140px;
+    bottom: -15px;
+}
 .cerebro-redes {
     width: 250px;
     cursor: pointer;
@@ -182,6 +276,95 @@ p, li, ol {
 .contenedor-principios {
     height: 80%;
     align-items: center;
+}
+.contenedor-principios > div {
+    flex: auto;
+    width: 33%;
+    box-shadow: 0px 0px 10px #ccc;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 2%;
+    max-height: 200px;
+    padding: .5rem;
+    height: fit-content;
+    border-bottom: 10px solid #076633;
+}
+.contenedor-principios table td {
+    vertical-align: middle;
+}
+.contenedor-principios table td:last-child {
+    text-align: right;
+}
+#pautas > div {
+    width: 100%;
+    height: 33%;
+    box-sizing: border-box;
+    align-items: center;
+    display: flex;
+}
+.nav-pauta {
+    display: block;
+    padding: 3rem;
+    border-radius: 10px;
+    color: #076633;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 auto;
+    width: fit-content;
+    box-shadow: 0 0 10px #cccccc;
+}
+.nav-pauta:hover, .nav-pauta:focus {
+    background-color: #076633;
+    color: white;
+}
+.content-pauta {
+    display: block;
+    width: 70%;
+}
+.title-pauta {
+    background-color: #076633;
+    color: white;
+    padding: 1rem 10px;
+}
+.content-arrow {
+    width: 100%;
+    position: relative;
+    padding-left: 20px;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+.content-arrow:before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 100%;
+    background-color: #076633;
+    left: 0;
+    top: 0;
+}
+.content-arrow:after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: -7px;
+    width: 0;
+    height: 0;
+    border-width: 15px 15px 0;
+    border-style: solid;
+    border-color: #076633 transparent transparent;
+}
+.content-bottom-pauta {
+    background-color: #91BF29;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 1.5rem;
+}
+.content-arrow a {
+    display: block;
+    background-color: #076633;
+    color: white;
+    padding: 10px;
 }
 .content-arrow-link {
     display: inline-block;
@@ -219,4 +402,13 @@ p, li, ol {
 }
 .a-i-center{
     align-items: center;
+}
+.big-font {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #076633;
+}
+.relative {
+    position: relative;
 }

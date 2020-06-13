@@ -1,5 +1,7 @@
 function showIndice(element) {
 
+    // element.preventDefault();
+
     let themes = document.querySelectorAll(".right-side > div");
     // console.log(themes);
     for (let x = 0; x < themes.length; x++) {
@@ -15,7 +17,7 @@ function showContent(element) {
 
     // console.log(element.getAttribute('data-target'));
     // let parent = element.parentNode;
-    console.log(element.parentNode);
+    // console.log(element.parentNode);
     let idContentElement = element.getAttribute('data-target');
     document.querySelector(".indice").classList.add('hidde');
     document.querySelector(idContentElement).classList.add('show');

@@ -1,4 +1,3 @@
-
 body {
     font-size: 15px;
     margin: 0;
@@ -9,9 +8,14 @@ body {
     background-color: #F6F6F6;
 }
 
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
 #ova-container {
     margin: 2em auto;
-    width: 800px;
+    width: 80vw;
     display: flex;
     border: 1px solid #000;
     position: relative;
@@ -23,6 +27,7 @@ body {
     background-color: #ffffff;
     text-decoration: none;
 }
+
 .main-menu a {
     display: block;
     text-align: left;
@@ -30,9 +35,11 @@ body {
     padding: 1rem .5rem;
     border-bottom: 1px solid #747474;
 }
+
 .main-menu a:last-child {
     border-bottom: 0;
 }
+
 .right-side {
     width: 80%;
 }

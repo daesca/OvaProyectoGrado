@@ -24,24 +24,42 @@
             <nav>
                 <ul class="main-menu">
                     <li>
-                        <a href="javascript:void(0)">
+                        <a href="javascript:void(0)" data-target="#introduccion" onclick="showIndice(this)" title="Ir a la sección" tabindex="1">
                             Introducción
                         </a>
                     </li>
-                    <li><a href="javascript:void(0)" data-target="#explora" onclick="showIndice(this)">Explora</a></li>
-                    <li><a href="javascript:void(0)" data-target="#explica" onclick="showIndice(this)">Explica</a></li>
+                    <li><a href="javascript:void(0)" data-target="#explora" onclick="showIndice(this)" title="Ir a la sección" tabindex="1">Explora</a></li>
+                    <li><a href="javascript:void(0)" data-target="#explica" onclick="showIndice(this)" title="Ir a la sección" tabindex="1">Explica</a></li>
+                    <li><a href="javascript:void(0)" data-target="#principios" onclick="showIndice(this)" title="Ir a la sección" tabindex="1">Principios DUA</a></li>
                 </ul>
             </nav>
         </div>
         <div class="right-side">
-            <div id="explora" class="show">
-                <div class="indice">
-                    <div class="item-indice" data-target="#video" onclick="showContent(this)">
-                        <h3 title="Video: UDL de un vistazo">Video: UDL de un vistazo</h3>
-                    </div>
-                    <div class="item-indice" data-target="#activityDaD">
-                        <h3 title="Actividad">Relacione los conceptos</h3>
-                    </div>
+            <div id="introduccion" class="show">
+                <div class="indice" style="display: block;">
+                    <h1>Introducción</h1>
+                    <p>
+
+                        Hablar de una educación para todos que reconoce la diversidad como valor, implica que se incorpore al aula de clases estrategias orientadas a que todos los estudiantes puedan acceder, aprender, participar y promoverse de un grado a otro y de un nivel
+                        a otro, sin perder de vista principios como la equidad y la calidad. En ese sentido, el Diseño Universal para el Aprendizaje (DUA), recoge una serie de principios y estrategias que orientan al docente en la implementación de metodologías
+                        que eliminan o minimizan las barreras y potencian los facilitadores para el aprendizaje y la participación de los estudiantes. Esta lección está orientada a conocer el Diseño Universal para el Aprendizaje (DUA) como opción metodológica
+                        flexible en el contexto de la justicia curricular.
+
+                    </p>
+                    <h2>Objetivo general</h2>
+                    <p>
+                        Reconocer el Diseño Universal para el Aprendizaje (DUA) y su implementación como opción metodológica flexible en el en el contexto de la justicia curricular.
+                    </p>
+
+                    <h2>Objetivos específicos</h2>
+                    <ul>
+                        <li>
+                            Identificar los principios y pautas del DUA y su aplicación en la práctica pedagógica.
+                        </li>
+                        <li>
+                            Realizar una caracterización de la Práctica Pedagógica bajo los principios y las pautas del DU
+                        </li>
+                    </ul>
                 </div>
                 <div class="content">
                     <div id="video">
@@ -54,33 +72,294 @@
                     </div>
                     <div id="activityDaD">
                         <p>Esta es la actividad</p>
+                    </div>
+                </div>
+            </div>
+            <div id="explora">
+                <h2>Introducción para el video</h2>
+                <p>
+                    En la lección anterior se abordaron los diferentes enfoques y perspectivas para la atención a la diversidad. También se realizó un ejercicio de caracterización para identificar la diversidad presente en el aula, superando los imaginarios que nos han llevado
+                    a entender que cuando se habla de este concepto es igual que referirse a discapacidad. Así, se pudo observar que los estudiantes poseen múltiples características desde lo actitudinal y aptitudinal, desde el relacionamiento con sus
+                    pares y docentes, con el aprendizaje entre otros. Desde esta perspectiva, se puede afirmar que el reto del maestro es mayúsculo cuando se trata de responder con equidad y calidad a dicha diversidad.
+                </p>
+
+                <div>
+                    <iframe alt="Video sobre Diseño Universal para el Aprendizaje DUA" width="560" height="315" src="https://www.youtube.com/embed/KNbHew448yE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <a href="javascript:void(0)" data-target="#emparejamiento" onclick="showIndice(this)" title="Ir a la Actividad">Emparejamiento</a>
+
+            </div>
+            <div id="emparejamiento">
+                <h2>Actividad de emparejamiento</h2>
+                <h3>Explicación</h3>
+                <p>
+                    En el cuadro que se presenta se observan las columnas A y B. En la primera (A) se enuncia cada principio del DUA y en la segunda (B) se presenta un ejemplo de cómo se puede aplicar cada principio en el aula de clases. Arrastra con el cursor la información
+                    de la columna B hacia el principio que consideres corresponde en la columna A. Presta atención porque sólo tienes una oportunidad de hacerlo bien.
+                </p>
+                <div style="display: flex">
+                    <div>
+                        <h4>Principio</h4>
+                        <small>Columna A</small>
+                        <div>
+                            <div>
+                                <strong>
+                                    Principio I.
+                                </strong>
+                                <p>
+                                    Proporcionar múltiples formas de representación (el qué del aprendizaje)
+                                </p>
+                            </div>
+                            <div>
+                                <strong>
+
+                                    Principio II.
+                                </strong>
+                                <p>
+                                    Proporcionar múltiples formas de acción y expresión (el cómo del aprendizaje)
+                                </p>
+                            </div>
+                            <div>
+                                <strong>
+                                    Principio III.
+                                </strong>
+                                <p>
+                                    Proporcionar múltiples formas de implicación (el porqué del aprendizaje)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Forma de aplicar el principio</h4>
+                        <small>Columna B</small>
+                        <div>
+                            <div>
+                                <p>
+                                    Personalizar y contextualizar las actividades teniendo en cuenta los intereses de los estudiantes
+                                </p>
+                            </div>
+                            <div>
+                                <p>
+                                    La información se le presenta al estudiante con diferente tamaño del texto, de la letra, las imágenes o el tipo de fuente. Se utilizan diagramas y gráficos.
+                                </p>
+                            </div>
+                            <div>
+                                <p>
+                                    Proporcionar alternativas de flexibilización en los tiempos, formas y medios para que los estudiantes realicen sus actividades o presenten tareas y evaluaciones.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div id="explica">
-                <div class="indice">
-                    <div class="item-indice" data-target="#video" onclick="showContent(this)">
-                        <h3 title="Video: UDL de un vistazo" alt="DUA: Diseño Universal para el Aprendizaje">DUA: Diseño Universal para el Aprendizaje</h3>
+                <h2>Diseño Universal de Aprendizaje - DUA</h2>
+                <p>
+                    Es un conjunto de principios y estrategias que incrementan las posibilidades de aprendizaje y la orientan al <b>Maestro</b> en formulación de metodologías flexibles teniendo en cuenta la <b>DIVERSIDAD EN EL AULA</b>.
+                </p>
+                <img src="img/cerebro.png" alt="Imagen de Cerebro Humano" />
+                <span>
+                    [Tooltip] En la corteza cerebral se
+                    encuentran aproximadamente
+                    1 billón de neuronas unidas
+                    por conexiones que
+                    comunican a todo el cerebro,
+                    Dentro de esta gran red se
+                    distinguen <b>tres redes
+                    primarias</b>.
+                </span>
+                <div>
+                    [Tooltip]
+                    <h3>
+                        Las redes de reconocimiento o representación
+                    </h3>
+                    <p>
+                        El "qué" del aprendizaje Se sitúan en la parte posterior del cerebro.
+                    </p>
+                    <ul>
+                        <li>
+
+                            Identifican patrones e interpretan de sonido, luz, olfato y tacto.
+                        </li>
+                        <li>
+                            Permiten reconocer voces, rostros, letras y palabras, así como el estilo de un autor y conceptos abstractos como la justicia.
+                        </li>
+                    </ul>
+                    <img src="img/redConocimiento.png" alt="Imagen de cerebro representando la red de conocimiento" />
+                </div>
+                <div>
+                    [Tooltip]
+                    <h3>
+                        Las redes estratégicas.
+
+                    </h3>
+                    <p>
+                        El “como" del aprendizaje.
+
+                    </p>
+                    <p>
+                        Las redes planificar, mentalmente estratégicas ejecutar y los patrones permiten controlar de las acciones para las diferentes tareas que pueden ser consientes o inconscientes.
+                    </p>
+                    <p>
+                        Permiten diferenciar las formas en que los estudiantes pueden expresar lo que saben.
+                    </p>
+                    <img src="img/redLogica.png" alt="Imagen de cerebro representando la red lógica" />
+                </div>
+                <div>
+                    [Tooltip]
+                    <h3>
+
+                        Las redes afectivas
+
+                    </h3>
+                    <p>
+                        El “porqué" del aprendizaje
+                    </p>
+                    <p>
+                        La redes afectivas permiten atribuir un significado emocional a los estímulos, reconocer y expresar emociones e interpretar expresiones faciales y todo tipo de lenguaje expresivo.
+                    </p>
+                    <p>
+                        Se componen muchos módulos especializados ubicados principalmente en el centro del cerebro asociados con el sistema límbico.
+                    </p>
+                    <p>
+                        Dichas estructuras influyen de diversas formas en la motivación para aprender y su compromiso con las tareas de aprendizaje
+                    </p>
+                    <img src="img/redAfectiva.png" alt="Imagen de cerebro representando la red afectiva" />
+                </div>
+                <p>
+                    Basados en cada una de las 3 REDES NEURONALES se crearon 3 PRINCIPIOS que buscan eliminar las barreras en la participación y mejorar el aprendizaje significativo
+                </p>
+                <div>
+                    <div>
+                        <h3>Red de conocimiento</h3>
+                        <p><b>Palabra clave:</b> <span>que</span> aprendo</p>
+                        <p>
+                            Proporcionar múltiples formas para presentar la información.
+                        </p>
                     </div>
-                    <div class="item-indice" data-target="#activityDaD">
-                        <h3 title="Actividad" title="Actividad Cerebros">Actividad Cerebros</h3>
+                    <div>
+                        <h3>Red estratégica</h3>
+                        <p><b>Palabras clave:</b><span>como</span> lo aprendo</p>
+                        <p>
+                            Proporcionar múltiples formas de expresión y acción.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Red afectiva</h3>
+                        <p><b>Palabras clave:</b><span>por qué</span> aprendo</p>
+                        <p>
+                            Proporcionar múltiples formas de motivación.
+                        </p>
                     </div>
                 </div>
-                <div class="content">
-                    <div id="video">
-
-                        <a href="javascript:void(0)" class="back-btn" data-target="#explora" title="Volver" onclick="back(this)">Volver</a>
+            </div>
+            <div id="principios">
+                <div>
+                    <a>Principio I</a>
+                    <div>
+                        <h3>Proporcionar multiples formas de <b>representación</b></h3>
                         <div>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/KNbHew448yE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <a href="">Proporcionar diferentes opciones para la percepción</a>
+                            <ul>
+                                <ol>Opciones que permiten la modificación y personalización de la presentación de la información</ol>
+                                <ol>Ofrecer alternativas para la información auditiva</ol>
+                                <ol>Ofrecer alternativas para la información visual</ol>
+                            </ul>
                         </div>
-
+                        <div>
+                            <a href="">Proporcionar multiples opciones para el lenguaje y los símbolos</a>
+                            <ul>
+                                <ol>Definir el vocabulario y los símbolos</ol>
+                                <ol>Clarificar la sintaxis y la estructura</ol>
+                                <ol>Facilitar la decodificación de texto, notaciones matemáticas y símbolos</ol>
+                                <ol>Promover la comprensión entre diferentes idiomas</ol>
+                                <ol>Ilustrar las ideas principales a través de multiples medios</ol>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="">Proporcionar opciones para la comprensión</a>
+                            <ul>
+                                <ol>Proveer o activar los conocimientos previos</ol>
+                                <ol>Destacar patrones, caracteristicas fundamentales, ideas principales y relaciones entre ellas</ol>
+                                <ol>Guiar el procesamiento de la información, la visualización y la manipulación</ol>
+                                <ol>Maximizar la memoria y la transferencia de información</ol>
+                            </ul>
+                        </div>
+                        <div>
+                            <p>Aprendíz capáz de idenficar los recursos adecuados</p>
+                        </div>
                     </div>
-                    <div id="activityDaD">
-                        <p>Esta es la actividad</p>
+                </div>
+                <div>
+                    <a>Principio II</a>
+                    <div>
+                        <h3>proporcionar multiples formas de <b>acción y expresión</b></h3>
+                        <div>
+                            <a href="">Proporcionar multiples medios físicos de accion</a>
+                            <ul>
+                                <ol>Variar los métodos de respuesta y navegación</ol>
+                                <ol>Optimizar el acceso a las herramientas y las tecnologías de asistencia</ol>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="">Proporcionar opciones para la expresión y la fluidez de la comunicación</a>
+                            <ul>
+                                <ol>Usar multiples opciones de medios de comunicación</ol>
+                                <ol>Usar multiples herramientas para la construcción y la composición</ol>
+                                <ol>Construir fluidez de aprendizaje con niveles graduados de apoyo para la practica y la ejecución</ol>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="">Proporcionar opciones para las funciones ejecutivas</a>
+                            <ul>
+                                <ol>Guiar el establecimiento de metas adecuadas</ol>
+                                <ol>Apoyar la planificación y el desarrollo de estrategias</ol>
+                                <ol>Facilitar la gestión de información y recursos</ol>
+                                <ol>Aumentar la capacidad para monitorear el progreso</ol>
+                            </ul>
+                        </div>
+                        <div>
+                            <p>Estudiante orientado a cumplir sus metas</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a>Principio III</a>
+                    <div>
+                        <h3>proporcionar multiples formas de <b>motivación</b></h3>
+                        <div>
+                            <a href="">Proporcionar opciones para captar el interés</a>
+                            <ul>
+                                <ol>Optimizar la elección individual y la autonomía</ol>
+                                <ol>Optimizar la relevancia y el valor de la autenticidad</ol>
+                                <ol>Minimizar las amenazas y las distracciones</ol>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="">Proporcionar opciones para mantener el esfuerzo y la persistencia</a>
+                            <ul>
+                                <ol>Resaltar la relevancia de las metas y los objetivos</ol>
+                                <ol>Variar los niveles de desafio y apoyo</ol>
+                                <ol>Fomentar la colaboración y la comunidad</ol>
+                                <ol>Incrementar el dominio de retroalimentación orientada</ol>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="">Proporcionar opciones para la autoregulación</a>
+                            <ul>
+                                <ol>Promover expectativas y creencias que optimicen la motivación</ol>
+                                <ol>Facilitar niveles de apoyo para copiar habilidades y estrategias</ol>
+                                <ol>Desarrollar la autoevaluación y la reflexión</ol>
+                            </ul>
+                        </div>
+                        <div>
+                            <p>Estudiante motivado y decidido</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    </div>
     </div>
     <script src="js/libs/jquery.js"></script>
     <script src="js/libs/jbility/js/jbility.js"></script>

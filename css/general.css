@@ -231,9 +231,31 @@ table {
 }
 
 
-/*Buttons*/
+/*Explora*/
 
-.back-btn {}
+
+/*Actividad emparejamiento*/
+
+.emparejamiento-columna {
+    width: 33%;
+    box-shadow: 0px 0px 10px #cccccc;
+    padding: 1em 0;
+}
+
+.emparejamiento-columna .item-columna:last-child {
+    border-bottom: none;
+}
+
+.title-columna {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.item-columna {
+    padding: 1em;
+    border-bottom: 1px solid #ccc;
+}
 
 
 /* Helpers */
@@ -517,6 +539,10 @@ table {
 
 .j-center {
     justify-content: center;
+}
+
+.j-around {
+    justify-content: space-around;
 }
 
 .d-col {

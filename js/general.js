@@ -33,3 +33,50 @@ function back(element) {
     document.querySelector(returnToIndice + " > div.indice ").classList.remove('hidde');
 
 }
+
+function showPopover(element) {
+
+    let popovers = document.querySelectorAll(".popover");
+    for (let x = 0; x < popovers.length; x++) {
+
+        // console.log(popovers[x]);
+        popovers[x].classList.add('none');
+
+    }
+    x = element.nextElementSibling;
+    x.classList.remove('none');
+
+}
+
+function showPauta(element) {
+
+    let navPautas = document.querySelectorAll(".nav-pauta");
+    for (let x = 0; x < navPautas.length; x++) {
+
+        if (navPautas[x] != element) {
+
+            navPautas[x].parentNode.classList.add('none');
+
+        }
+
+    }
+    element.parentNode.classList.add('height-auto');
+    x = element.nextElementSibling;
+    x.classList.remove('none');
+
+
+}
+
+function backPrincipios() {
+
+    let navPautas = document.querySelectorAll(".nav-pauta");
+
+    for (let x = 0; x < navPautas.length; x++) {
+
+        navPautas[x].parentNode.classList.remove('height-auto');
+        navPautas[x].nextElementSibling.classList.add('none');
+        navPautas[x].parentNode.classList.remove('none');
+
+    }
+
+}

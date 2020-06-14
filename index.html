@@ -23,9 +23,22 @@
                             Introducción
                         </a>
                     </li>
-                    <li><a href="javascript:void(0)" data-target="#explora" onclick="showIndice(this)" title="Ir a la sección" tabindex="1">Explora</a></li>
-                    <li><a href="javascript:void(0)" data-target="#explica" onclick="showIndice(this)" title="Ir a la sección" tabindex="1">Explica</a></li>
+                    <li>
+                        <a href="javascript:void(0)" title="Activar sub menú" onclick="activeSubmenu()" tabindex="1">Explora</a>
+                        <ul class="submenu">
+                            <li><a href="javascript:void(0)" data-target="#explora" onclick="showIndice(this)" tabindex="1">Video introductorio</a></li>
+                            <li><a href="javascript:void(0)" data-target="#emparejamiento" onclick="showIndice(this)" tabindex="1">Actividad de emparejamiento</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" title="Activar sub menú" onclick="activeSubmenu()" tabindex="1">Explica</a>
+                        <ul class="submenu">
+                            <li><a href="javascript:void(0)" data-target="#explica" onclick="showIndice(this)" tabindex="1">Diseño Universal de Aprendizaje - DUA</a></li>
+                            <li><a href="javascript:void(0)" data-target="#principios_resumen" onclick="showIndice(this)" tabindex="1">Resumen Principios DUA</a></li>
+                        </ul>
+                    </li>
                     <li><a href="javascript:void(0)" data-target="#pautas" onclick="showIndice(this)" title="Ir a la sección" tabindex="1">Pautas DUA</a></li>
+                    <li><a href="javascript:void(0)" data-target="#referencias" onclick="showIndice(this)" title="Ir a la sección" tabindex="1">Referencias</a></li>
                 </ul>
             </nav>
             <div class="acess-container">
@@ -39,29 +52,30 @@
         </div>
         <div class="right-side">
             <div id="introduccion" class="show">
-                    <h1 tabindex="2">Introducción</h1>
-                    <p>
+                <h1 class="text-center">OVA Diseño Universal para el Aprendizaje</h1>
+                <h2 tabindex="2">Introducción</h2>
+                <p>
 
-                        Hablar de una educación para todos que reconoce la diversidad como valor, implica que se incorpore al aula de clases estrategias orientadas a que todos los estudiantes puedan acceder, aprender, participar y promoverse de un grado a otro y de un nivel
-                        a otro, sin perder de vista principios como la equidad y la calidad. En ese sentido, el Diseño Universal para el Aprendizaje (DUA), recoge una serie de principios y estrategias que orientan al docente en la implementación de metodologías
-                        que eliminan o minimizan las barreras y potencian los facilitadores para el aprendizaje y la participación de los estudiantes. Esta lección está orientada a conocer el Diseño Universal para el Aprendizaje (DUA) como opción metodológica
-                        flexible en el contexto de la justicia curricular.
+                    Hablar de una educación para todos que reconoce la diversidad como valor, implica que se incorpore al aula de clases estrategias orientadas a que todos los estudiantes puedan acceder, aprender, participar y promoverse de un grado a otro y de un nivel
+                    a otro, sin perder de vista principios como la equidad y la calidad. En ese sentido, el Diseño Universal para el Aprendizaje (DUA), recoge una serie de principios y estrategias que orientan al docente en la implementación de metodologías
+                    que eliminan o minimizan las barreras y potencian los facilitadores para el aprendizaje y la participación de los estudiantes. Esta lección está orientada a conocer el Diseño Universal para el Aprendizaje (DUA) como opción metodológica
+                    flexible en el contexto de la justicia curricular.
 
-                    </p>
-                    <h2 tabindex="2">Objetivo general</h2>
-                    <p>
-                        Reconocer el Diseño Universal para el Aprendizaje (DUA) y su implementación como opción metodológica flexible en el en el contexto de la justicia curricular.
-                    </p>
+                </p>
+                <h2 tabindex="2">Objetivo general</h2>
+                <p>
+                    Reconocer el Diseño Universal para el Aprendizaje (DUA) y su implementación como opción metodológica flexible en el en el contexto de la justicia curricular.
+                </p>
 
-                    <h2 tabindex="2">Objetivos específicos</h2>
-                    <ul>
-                        <li>
-                            Identificar los principios y pautas del DUA y su aplicación en la práctica pedagógica.
-                        </li>
-                        <li>
-                            Realizar una caracterización de la Práctica Pedagógica bajo los principios y las pautas del DU
-                        </li>
-                    </ul>
+                <h2 tabindex="2">Objetivos específicos</h2>
+                <ul>
+                    <li>
+                        Identificar los principios y pautas del DUA y su aplicación en la práctica pedagógica.
+                    </li>
+                    <li>
+                        Realizar una caracterización de la Práctica Pedagógica bajo los principios y las pautas del DU
+                    </li>
+                </ul>
             </div>
             <div id="explora">
                 <h2 tabindex="2">Introducción para el video</h2>
@@ -75,10 +89,7 @@
                     <iframe title="Video sobre Diseño Universal para el Aprendizaje DUA" width="560" height="315" src="https://www.youtube.com/embed/KNbHew448yE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="flex j-center">
-                    <a class="content-arrow-link center"
-                       href="javascript:void(0)"
-                       data-target="#emparejamiento"
-                       onclick="showIndice(this)" title="Ir a la Actividad">Ir actividad de emparejamiento</a>
+                    <a class="content-arrow-link center" href="javascript:void(0)" data-target="#emparejamiento" onclick="showIndice(this)" title="Ir a la Actividad">Ir actividad de emparejamiento</a>
                 </div>
 
             </div>
@@ -151,16 +162,10 @@
                 </p>
                 <div class="flex j-center d-col a-i-center">
                     <div class="relative">
-                        <img tabindex="3" src="img/cerebro.png" alt="Imagen de Cerebro Humano" class="cerebro-descripcion"/>
-                        <div class="popover right">
+                        <img tabindex="3" src="img/cerebro.png" alt="Imagen de Cerebro Humano" class="cerebro-descripcion" onclick="showPopover(this)" />
+                        <div class="popover right none">
                             <p>
-                                En la corteza cerebral se
-                                encuentran aproximadamente
-                                1 billón de neuronas unidas
-                                por conexiones que
-                                comunican a todo el cerebro,
-                                Dentro de esta gran red se
-                                distinguen <b>tres redes
+                                En la corteza cerebral se encuentran aproximadamente 1 billón de neuronas unidas por conexiones que comunican a todo el cerebro, Dentro de esta gran red se distinguen <b>tres redes
                                 primarias</b>.
                             </p>
                         </div>
@@ -168,9 +173,8 @@
                 </div>
                 <div class="content-cerebros-redes flex d-row">
                     <div class="content-cerebro-red">
-                        <img tabindex="3" class="cerebro-redes" src="img/redConocimiento.png" alt="Imagen de cerebro representando la red de conocimiento" />
+                        <img tabindex="3" class="cerebro-redes" src="img/redConocimiento.png" alt="Imagen de cerebro representando la red de conocimiento" onclick="showPopover(this)" />
                         <div class="popover first none">
-                            []
                             <h3>
                                 Las redes de reconocimiento o representación
                             </h3>
@@ -189,7 +193,7 @@
                         </div>
                     </div>
                     <div class="content-cerebro-red">
-                        <img tabindex="3" class="cerebro-redes" src="img/redLogica.png" alt="Imagen de cerebro representando la red lógica" />
+                        <img tabindex="3" class="cerebro-redes" src="img/redLogica.png" alt="Imagen de cerebro representando la red lógica" onclick="showPopover(this)" />
                         <div class="popover second none">
                             <h3>
                                 Las redes estratégicas.
@@ -208,7 +212,7 @@
                         </div>
                     </div>
                     <div class="content-cerebro-red">
-                        <img tabindex="3" class="cerebro-redes" src="img/redAfectiva.png" alt="Imagen de cerebro representando la red afectiva" />
+                        <img tabindex="3" class="cerebro-redes" src="img/redAfectiva.png" alt="Imagen de cerebro representando la red afectiva" onclick="showPopover(this)" />
                         <div class="popover third none">
                             <h3>
 
@@ -234,10 +238,7 @@
                     Basados en cada una de las 3 REDES NEURONALES se crearon 3 PRINCIPIOS que buscan eliminar las barreras en la participación y mejorar el aprendizaje significativo
                 </p>
                 <div class="flex j-center">
-                    <a class="content-arrow-link center"
-                       href="javascript:void(0)"
-                       data-target="#principios_resumen"
-                       onclick="showIndice(this)" title="Ir a la sección los 3 principios">Ir a los 3 principios</a>
+                    <a class="content-arrow-link center" href="javascript:void(0)" data-target="#principios_resumen" onclick="showIndice(this)" title="Ir a la sección los 3 principios">Ir a los 3 principios</a>
                 </div>
             </div>
             <div id="principios_resumen">
@@ -286,16 +287,17 @@
                     </div>
                 </div>
                 <div class="flex j-center">
-                    <a class="content-arrow-link center"
-                       href="javascript:void(0)"
-                       data-target="#pautas"
-                       onclick="showIndice(this)" title="Ir a la sección de las pautas de DUA">Ir a las pautas de DUA</a>
+                    <a class="content-arrow-link center" href="javascript:void(0)" data-target="#pautas" onclick="showIndice(this)" title="Ir a la sección de las pautas de DUA">Ir a las pautas de DUA</a>
                 </div>
             </div>
             <div id="pautas">
+                <h2>Pautas DUA</h2>
+                <p>
+                    Elige una pauta para visualizar información mas detallada de cada principio.
+                </p>
                 <div>
-                    <a class="nav-pauta" href="javascript:void(0)" title="DUA: ">Principio 1</a>
-                    <div class="content-pauta">
+                    <a class="nav-pauta" href="javascript:void(0)" title="DUA:" onclick="showPauta(this)">Principio 1</a>
+                    <div class="content-pauta none">
                         <h3 class="title-pauta">Proporcionar multiples formas de <b>representación</b></h3>
                         <div class="content-arrow">
                             <div>
@@ -329,11 +331,14 @@
                         <div class="content-bottom-pauta">
                             <p>Aprendíz capáz de idenficar los recursos adecuados</p>
                         </div>
+                        <div class="text-center">
+                            <a href="javascript:void(0)" class="content-arrow-link-back mt-2em" onclick="backPrincipios()">Volver a las pautas</a>
+                        </div>
                     </div>
                 </div>
                 <div>
-                    <a class="nav-pauta" href="javascript:void(0)" title="DUA: ">Principio 2</a>
-                    <div class="content-pauta">
+                    <a class="nav-pauta" href="javascript:void(0)" title="DUA: " onclick="showPauta(this)">Principio 2</a>
+                    <div class="content-pauta none">
                         <h3 class="title-pauta">proporcionar multiples formas de <b>acción y expresión</b></h3>
                         <div class="content-arrow">
                             <div>
@@ -364,11 +369,14 @@
                         <div class="content-bottom-pauta">
                             <p>Estudiante orientado a cumplir sus metas</p>
                         </div>
+                        <div class="text-center">
+                            <a href="javascript:void(0)" class="content-arrow-link-back mt-2em" onclick="backPrincipios()">Volver a las pautas</a>
+                        </div>
                     </div>
                 </div>
                 <div>
-                    <a class="nav-pauta" href="javascript:void(0)" title="DUA: ">Principio 3</a>
-                    <div class="content-pauta">
+                    <a class="nav-pauta" href="javascript:void(0)" title="DUA: " onclick="showPauta(this)">Principio 3</a>
+                    <div class="content-pauta none">
                         <h3 class="title-pauta">proporcionar multiples formas de <b>motivación</b></h3>
                         <div class="content-arrow">
                             <div>
@@ -400,8 +408,18 @@
                         <div class="content-bottom-pauta">
                             <p>Estudiante motivado y decidido</p>
                         </div>
+                        <div class="text-center">
+                            <a href="javascript:void(0)" class="content-arrow-link-back mt-2em" onclick="backPrincipios()">Volver a las pautas</a>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div id="referencias">
+                <h2 tabindex="2">Referencias</h2>
+                <p>
+                    CAST. (SF). Diseño Universal para el Aprendizaje (DUA) Pautas para su introducción en el currículo. Alba, C., Sánchez, J. & Zubillaga, A. Recuperado de:
+                    <a href="http://educadua.es/html/dua/pautasDUA/dua_pautas.html" title="Ir al material de la referencia">http://educadua.es/html/dua/pautasDUA/dua_pautas.html</a>
+                </p>
             </div>
         </div>
     </div>

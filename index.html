@@ -23,15 +23,15 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:void(0)" title="Activar sub menú" onclick="activeSubmenu()" tabindex="1">Explora</a>
-                        <ul class="submenu">
+                        <a href="javascript:void(0)" title="Activar sub menú" onclick="activeSubmenu(this)" tabindex="1">Explora <i class="arrow-open"></i></a>
+                        <ul class="submenu none">
                             <li><a href="javascript:void(0)" data-target="#explora" onclick="showIndice(this)" tabindex="1">Video introductorio</a></li>
                             <li><a href="javascript:void(0)" data-target="#emparejamiento" onclick="showIndice(this)" tabindex="1">Actividad de emparejamiento</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="javascript:void(0)" title="Activar sub menú" onclick="activeSubmenu()" tabindex="1">Explica</a>
-                        <ul class="submenu">
+                        <a href="javascript:void(0)" title="Activar sub menú" onclick="activeSubmenu(this)" tabindex="1">Explica <i class="arrow-open"></i></a>
+                        <ul class="submenu none ">
                             <li><a href="javascript:void(0)" data-target="#explica" onclick="showIndice(this)" tabindex="1">Diseño Universal de Aprendizaje - DUA</a></li>
                             <li><a href="javascript:void(0)" data-target="#principios_resumen" onclick="showIndice(this)" tabindex="1">Resumen Principios DUA</a></li>
                         </ul>
@@ -164,7 +164,7 @@
                 </p>
                 <div class="flex j-center d-col a-i-center ">
                     <div class="relative ">
-                        <img tabindex="3 " src="img/cerebro.png " alt="Imagen de Cerebro Humano " class="cerebro-descripcion " onclick="showPopover(this) " />
+                        <img tabindex="3 " src="img/cerebro.png " alt="Imagen de Cerebro Humano " class="cerebro-descripcion open-popover" onclick="showPopover(this) " />
                         <div class="popover right none ">
                             <p>
                                 En la corteza cerebral se encuentran aproximadamente 1 billón de neuronas unidas por conexiones que comunican a todo el cerebro, Dentro de esta gran red se distinguen <b>tres redes
@@ -175,7 +175,7 @@
                 </div>
                 <div class="content-cerebros-redes flex d-row ">
                     <div class="content-cerebro-red ">
-                        <img tabindex="3 " class="cerebro-redes " src="img/redConocimiento.png " alt="Imagen de cerebro representando la red de conocimiento " onclick="showPopover(this) " />
+                        <img tabindex="3 " class="cerebro-redes open-popover" src="img/redConocimiento.png " alt="Imagen de cerebro representando la red de conocimiento " onclick="showPopover(this) " />
                         <div class="popover first none ">
                             <h3>
                                 Las redes de reconocimiento o representación
@@ -195,7 +195,7 @@
                         </div>
                     </div>
                     <div class="content-cerebro-red ">
-                        <img tabindex="3 " class="cerebro-redes " src="img/redLogica.png " alt="Imagen de cerebro representando la red lógica " onclick="showPopover(this) " />
+                        <img tabindex="3 " class="cerebro-redes open-popover" src="img/redLogica.png " alt="Imagen de cerebro representando la red lógica " onclick="showPopover(this) " />
                         <div class="popover second none ">
                             <h3>
                                 Las redes estratégicas.
@@ -212,7 +212,7 @@
                         </div>
                     </div>
                     <div class="content-cerebro-red">
-                        <img tabindex="3" class="cerebro-redes" src="img/redAfectiva.png" alt="Imagen de cerebro representando la red afectiva" onclick="showPopover(this)" />
+                        <img tabindex="3" class="cerebro-redes open-popover" src="img/redAfectiva.png" alt="Imagen de cerebro representando la red afectiva" onclick="showPopover(this)" />
                         <div class="popover third none">
                             <h3>
 

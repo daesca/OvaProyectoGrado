@@ -22,8 +22,9 @@ function showContent(element) {
     document.querySelector(".indice").classList.add('hidde');
     document.querySelector(idContentElement).classList.add('show');
 
-
 }
+
+
 
 function back(element) {
 
@@ -35,16 +36,22 @@ function back(element) {
 }
 
 function showPopover(element) {
+    if(element.classList.contains('active')) {
+        x.classList.add('none');
+        element.classList.remove('active');
+    } else {
+        removeActive();
+        let popovers = document.querySelectorAll(".popover");
+        for (let x = 0; x < popovers.length; x++) {
 
-    let popovers = document.querySelectorAll(".popover");
-    for (let x = 0; x < popovers.length; x++) {
+            // console.log(popovers[x]);
+            popovers[x].classList.add('none');
 
-        // console.log(popovers[x]);
-        popovers[x].classList.add('none');
-
+        }
+        element.classList.add('active');
+        x = element.nextElementSibling;
+        x.classList.remove('none');
     }
-    x = element.nextElementSibling;
-    x.classList.remove('none');
 
 }
 
@@ -53,7 +60,7 @@ function showPauta(element) {
     let navPautas = document.querySelectorAll(".nav-pauta");
     for (let x = 0; x < navPautas.length; x++) {
 
-        if (navPautas[x] != element) {
+        if (navPautas[x] !== element) {
 
             navPautas[x].parentNode.classList.add('none');
 
@@ -79,4 +86,27 @@ function backPrincipios() {
 
     }
 
+}
+function activeSubmenu(element)
+{
+    closeSubmenu();
+    element.nextElementSibling.classList.remove('none');
+
+}
+
+function closeSubmenu() {
+    var submenu = document.getElementsByClassName('submenu');
+    for (var i = 0; i < submenu.length; i++) {
+        submenu[i].classList.add('none');
+    }
+}
+
+function removeActive() {
+    let popovers = document.querySelectorAll(".open-popover");
+    for (let x = 0; x < popovers.length; x++) {
+
+        // console.log(popovers[x]);
+        popovers[x].classList.remove('active');
+
+    }
 }

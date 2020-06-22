@@ -184,7 +184,7 @@ function evaluatedQuestions() {
 
         let questionContainer = document.querySelector("#falsoVerdadero > #preguntas > #pregunta-" + questionIndex);
 
-        let responseContainer = document.querySelector("#resultado > #pregunta-" + questionIndex);
+        let responseContainer = document.querySelector("#resultado > #resultado-" + questionIndex);
 
         // console.log(responseContainer);
 

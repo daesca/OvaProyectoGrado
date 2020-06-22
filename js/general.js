@@ -1,3 +1,40 @@
+let questions = [
+
+    {
+        text: 'Las redes de reconocimiento se sitúan en la parte superior del cerebro',
+        correctAnswer: 1
+    },
+    {
+        text: 'Las redes estratégicas representan el "cómo" del aprendizaje',
+        correctAnswer: 1
+    },
+    {
+        text: 'Las redes afectivas representan el "por qué" del aprendizaje',
+        correctAnswer: 1
+    },
+    {
+        text: 'Las redes de reconocimiento representan el "qué" del aprendizaje',
+        correctAnswer: 1
+    },
+    {
+        text: 'El enunciado "Responde a las diferentes formas en que los estudiantes perciben y comprenden la información" corresponde a lo establecido en el Principio 3',
+        correctAnswer: 0
+    },
+    {
+        text: '"Proporcionar múltiples formas de expresión del aprendizaje" es un enunciado del Principio 1',
+        correctAnswer: 0
+    },
+    {
+        text: 'El enunciado: "Guarda relación con la forma como la persona se motiva y se compromete con el proceso de aprendizaje" hace alución al Principio 2',
+        correctAnswer: 0
+    },
+    {
+        text: 'No hace parte de las funciones de las redes estratégicas las siguientes tareas: planificar, ejecutar y monitorizar las tareas motrices y mentales',
+        correctAnswer: 0
+    }
+
+];
+
 function showIndice(element) {
 
     // element.preventDefault();
@@ -36,7 +73,7 @@ function back(element) {
 }
 
 function showPopover(element) {
-    if(element.classList.contains('active')) {
+    if (element.classList.contains('active')) {
         x.classList.add('none');
         element.classList.remove('active');
     } else {
@@ -87,8 +124,8 @@ function backPrincipios() {
     }
 
 }
-function activeSubmenu(element)
-{
+
+function activeSubmenu(element) {
     closeSubmenu();
     element.nextElementSibling.classList.remove('none');
 
@@ -109,4 +146,76 @@ function removeActive() {
         popovers[x].classList.remove('active');
 
     }
+}
+
+function addQuestions(questions) {
+
+    // console.log(questions);
+
+    let mutableQuestions = questions;
+
+    for (let i = 0; i < 4; i++) {
+
+        let randomIndex = Math.floor(Math.random() * (mutableQuestions.length - 1)) + 0;
+        // console.log(randomIndex);
+
+        let questionIndex = i + 1;
+
+        let questionContainer = document.querySelector("#falsoVerdadero > #preguntas > #pregunta-" + questionIndex);
+        // console.log(questionContainer.childNodes);
+
+        questionContainer.setAttribute('data-answer', mutableQuestions[randomIndex].correctAnswer);
+
+        questionContainer.childNodes[1].innerHTML = mutableQuestions[randomIndex].text;
+
+        mutableQuestions.splice(randomIndex, 1);
+
+    }
+
+}
+
+function evaluatedQuestions() {
+
+    resultsContainer = document.querySelector("#resultado");
+
+    for (let i = 0; i < 4; i++) {
+
+        let questionIndex = i + 1;
+
+        let questionContainer = document.querySelector("#falsoVerdadero > #preguntas > #pregunta-" + questionIndex);
+
+        let responseContainer = document.querySelector("#resultado > #pregunta-" + questionIndex);
+
+        // console.log(responseContainer);
+
+        let option = document.querySelector("#opciones-" + questionIndex).value;
+
+        if (option == questionContainer.getAttribute('data-answer')) {
+
+            responseContainer.classList.add('success');
+            responseContainer.childNodes[1].innerHTML = "¡Correcto!";
+
+        } else {
+
+            responseContainer.classList.add('warning');
+            console.log(responseContainer.childNodes);
+            responseContainer.childNodes[1].innerHTML = "Incorrecto";
+
+            let textAnswer = "Verdadero";
+
+            if (questionContainer.getAttribute('data-answer') != 1) {
+
+                textAnswer = "Falso";
+
+            }
+
+            responseContainer.childNodes[3].innerHTML = "La respuesta correcta era: " + textAnswer;
+
+        }
+
+
+    }
+
+    resultsContainer.classList.remove('none');
+
 }

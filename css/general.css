@@ -88,6 +88,21 @@ table {
     width: 100%;
 }
 
+.btn {
+    padding: 2em 1em;
+    padding: .5em 1em;
+    width: fit-content;
+    border-radius: 10px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-decoration: none;
+}
+
+.btn-ova {
+    background-color: #076633;
+    color: #ffffff;
+}
+
 #ova-container {
     margin: 2em auto;
     width: 80vw;
@@ -134,9 +149,11 @@ table {
 .main-menu li {
     border-bottom: 1px solid #747474;
 }
-.main-menu > li > a {
+
+.main-menu>li>a {
     position: relative;
 }
+
 .main-menu a {
     display: block;
     text-align: left;
@@ -526,6 +543,7 @@ table {
     border-style: solid;
     border-color: transparent #076633 transparent transparent;
 }
+
 .arrow-open {
     width: 0;
     height: 0;
@@ -537,7 +555,6 @@ table {
     position: absolute;
     right: 10px;
     top: 30%;
-
 }
 
 .center {
@@ -583,6 +600,51 @@ table {
     margin-top: 2em;
 }
 
+.mb-2em {
+    margin-bottom: 2em;
+}
+
 .text-center {
     text-align: center;
+}
+
+
+/*Actividad falso y verdadero*/
+
+#preguntas,
+#resultado {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.box-question {
+    width: 40%;
+    border: 1px solid;
+    padding: 2em 1em;
+    box-sizing: border-box;
+    margin-top: 2em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box-question p {
+    color: #076633;
+    margin-bottom: .5em;
+}
+
+.box-question select {
+    width: 100%;
+    padding: .3em;
+    border-radius: 10px;
+}
+
+.box-question.success {
+    background-color: #D4EDDA;
+}
+
+.box-question.warning {
+    background-color: #FFF3CD;
 }

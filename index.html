@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <title>OVA Diseño Universal para el Aprendizaje</title>
     <meta charset="UTF-8">
@@ -34,6 +35,7 @@
                         <ul class="submenu none ">
                             <li><a href="javascript:void(0)" data-target="#explica" onclick="showIndice(this)" tabindex="1">Diseño Universal de Aprendizaje - DUA</a></li>
                             <li><a href="javascript:void(0)" data-target="#principios_resumen" onclick="showIndice(this)" tabindex="1">Resumen Principios DUA</a></li>
+                            <li><a href="javascript:void(0)" data-target="#falsoVerdadero" onclick="showIndice(this)" tabindex="1">Actividad Falso y Verdadero</a></li>
                         </ul>
                     </li>
                     <li><a href="javascript:void(0)" data-target="#pautas" onclick="showIndice(this)" title="Ir a la sección" tabindex="1">Pautas DUA</a></li>
@@ -164,7 +166,7 @@
                 </p>
                 <div class="flex j-center d-col a-i-center ">
                     <div class="relative ">
-                        <img tabindex="3 " src="img/cerebro.png " alt="Imagen de Cerebro Humano " class="cerebro-descripcion open-popover" onclick="showPopover(this) " />
+                        <img tabindex="3 " src="img/cerebro.png " alt="Imagen de Cerebro Humano " class="cerebro-descripcion open-popover" onclick="showPopover(this) " onkeypress="showPopover(this) " />
                         <div class="popover right none ">
                             <p>
                                 En la corteza cerebral se encuentran aproximadamente 1 billón de neuronas unidas por conexiones que comunican a todo el cerebro, Dentro de esta gran red se distinguen <b>tres redes
@@ -175,7 +177,7 @@
                 </div>
                 <div class="content-cerebros-redes flex d-row ">
                     <div class="content-cerebro-red ">
-                        <img tabindex="3 " class="cerebro-redes open-popover" src="img/redConocimiento.png " alt="Imagen de cerebro representando la red de conocimiento " onclick="showPopover(this) " />
+                        <img tabindex="3 " class="cerebro-redes open-popover" src="img/redConocimiento.png " alt="Imagen de cerebro representando la red de conocimiento " onclick="showPopover(this) " onkeypress="showPopover(this) " />
                         <div class="popover first none ">
                             <h3>
                                 Las redes de reconocimiento o representación
@@ -195,7 +197,7 @@
                         </div>
                     </div>
                     <div class="content-cerebro-red ">
-                        <img tabindex="3 " class="cerebro-redes open-popover" src="img/redLogica.png " alt="Imagen de cerebro representando la red lógica " onclick="showPopover(this) " />
+                        <img tabindex="3 " class="cerebro-redes open-popover" src="img/redLogica.png " alt="Imagen de cerebro representando la red lógica " onclick="showPopover(this) " onkeypress="showPopover(this) " />
                         <div class="popover second none ">
                             <h3>
                                 Las redes estratégicas.
@@ -212,7 +214,7 @@
                         </div>
                     </div>
                     <div class="content-cerebro-red">
-                        <img tabindex="3" class="cerebro-redes open-popover" src="img/redAfectiva.png" alt="Imagen de cerebro representando la red afectiva" onclick="showPopover(this)" />
+                        <img tabindex="3" class="cerebro-redes open-popover" src="img/redAfectiva.png" alt="Imagen de cerebro representando la red afectiva" onclick="showPopover(this)" onkeypress="showPopover(this) " />
                         <div class="popover third none">
                             <h3>
 
@@ -239,6 +241,84 @@
                 </p>
                 <div class="flex j-center">
                     <a class="content-arrow-link center" href="javascript:void(0)" data-target="#principios_resumen" onclick="showIndice(this)" title="Ir a la sección los 3 principios">Ir a los 3 principios</a>
+                </div>
+            </div>
+            <div id="falsoVerdadero">
+                <h2 class="text-center">Actividad Falso y Verdadero</h2>
+                <p>
+                    Elige falso o verdadero en cada recuadro según sea la opción correcta.
+                </p>
+                <div id="preguntas">
+                    <div id="pregunta-1" class="box-question">
+                        <p>
+
+                        </p>
+                        <select id="opciones-1">
+                            <option default>Seleccione una opción</option>
+                            <option value="0">Falso</option>
+                            <option value="1">Verdadero</option>
+                        </select>
+                    </div>
+                    <div id="pregunta-2" class="box-question">
+                        <p>
+
+                        </p>
+                        <select id="opciones-2">
+                            <option default>Seleccione una opción</option>
+                            <option value="0">Falso</option>
+                            <option value="1">Verdadero</option>
+                        </select>
+                    </div>
+                    <div id="pregunta-3" class="box-question">
+                        <p>
+
+                        </p>
+                        <select id="opciones-3">
+                            <option default>Seleccione una opción</option>
+                            <option value="0">Falso</option>
+                            <option value="1">Verdadero</option>
+                        </select>
+                    </div>
+                    <div id="pregunta-4" class="box-question">
+                        <p>
+
+                        </p>
+                        <select id="opciones-4">
+                            <option default>Seleccione una opción</option>
+                            <option value="0">Falso</option>
+                            <option value="1">Verdadero</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mt-2em mb-2em text-center">
+                    <a href="javascript:void(0)" class="btn btn-ova" title="botón" onclick="evaluatedQuestions()">Evaluar actividad</a>
+                </div>
+                <div id="resultado" class="none">
+                    <div id="pregunta-1" class="box-question">
+                        <span class="result"></span>
+                        <p>
+
+                        </p>
+
+                    </div>
+                    <div id="pregunta-2" class="box-question">
+                        <span class="result"></span>
+                        <p>
+
+                        </p>
+                    </div>
+                    <div id="pregunta-3" class="box-question">
+                        <span class="result"></span>
+                        <p>
+
+                        </p>
+                    </div>
+                    <div id="pregunta-4" class="box-question">
+                        <span class="result"></span>
+                        <p>
+
+                        </p>
+                    </div>
                 </div>
             </div>
             <div id="principios_resumen">
@@ -429,6 +509,11 @@
     <script src="js/libs/jbility/js/jbility.js"></script>
     <!-- <script src="js/libs/draggable/index.js"></script> -->
     <script src="js/general.js"></script>
+    <script>
+        window.onload = function() {
+            addQuestions(questions);
+        };
+    </script>
 </body>
 
 </html>

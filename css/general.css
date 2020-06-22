@@ -89,13 +89,13 @@ table {
 }
 
 .btn {
-    padding: 2em 1em;
     padding: .5em 1em;
     width: fit-content;
     border-radius: 10px;
     margin-top: 1em;
     margin-bottom: 1em;
     text-decoration: none;
+    display: block;
 }
 
 .btn-ova {
@@ -276,6 +276,18 @@ table {
     border-bottom: 1px solid #ccc;
 }
 
+/* dragandrop */
+
+#columna_b .item-columna {
+    cursor: move;
+}
+.dropzone {
+    margin-top: 1em;
+    width: 100%;
+    border: 2px dotted #076633;
+    padding: .5em;
+    box-sizing: border-box;
+}
 
 /* Helpers */
 

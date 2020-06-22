@@ -34,6 +34,8 @@ let questions = [
     }
 
 ];
+var columna_a = document.getElementById("columna_a").innerHTML;
+var columna_b = document.getElementById("columna_b").innerHTML;
 
 function showIndice(element) {
 
@@ -218,4 +220,42 @@ function evaluatedQuestions() {
 
     resultsContainer.classList.remove('none');
 
+}
+
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.target.style.opacity = ".5";
+
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function dropFake() {
+    return false;
+}
+
+function drop(ev) {
+    var data = ev.dataTransfer.getData("text");
+    var col_b = document.getElementById(data);
+    console.log(col_b.getAttribute('data-col'));
+    console.log(ev.target.getAttribute('data-col'));
+    if (col_b.getAttribute('data-col') === ev.target.getAttribute('data-col')) {
+        ev.target.style.backgroundColor = "#e4fff0";
+    } else {
+        ev.target.style.backgroundColor = "#ffc4c4";
+    }
+    ev.target.appendChild(col_b);
+    ev.target.setAttribute('ondrop', dropFake);
+}
+
+function dragend(ev) {
+    ev.target.style.opacity = "1";
+    ev.target.childNodes[1].style.opacity = "1";
+}
+function resetDragAndDrop(ev) {
+    ev.preventDefault();
+    document.getElementById("columna_a").innerHTML = columna_a;
+    document.getElementById("columna_b").innerHTML = columna_b;
 }

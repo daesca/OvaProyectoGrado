@@ -14,7 +14,7 @@
     <div id="ova-container">
         <div class="left-side">
             <div class="logo">
-                <img src="img/logo-tdea.png" alt="Logo de la institución universitaria Tecnologico de Antioquia">
+                <img src="img/logo-tdea.png" longdesc="Logo de la institución universitaria Tecnologico de Antioquia">
             </div>
             <nav>
                 <ul class="main-menu">
@@ -102,7 +102,7 @@
                     de la columna B hacia el principio que consideres corresponde en la columna A. Presta atención porque sólo tienes una oportunidad de hacerlo bien.
                 </p>
                 <div class="flex j-around mt-2em">
-                    <div class="emparejamiento-columna ">
+                    <div id="columna_a" class="emparejamiento-columna ">
                         <h4 class="text-center">Principios</h4>
                         <small class="title-columna">Columna A</small>
                         <div>
@@ -113,6 +113,8 @@
                                 <p>
                                     Proporcionar múltiples formas de representación (el qué del aprendizaje)
                                 </p>
+                                <div class="dropzone" data-col="1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                </div>
                             </div>
                             <div class="item-columna">
                                 <strong>
@@ -122,6 +124,8 @@
                                 <p>
                                     Proporcionar múltiples formas de acción y expresión (el cómo del aprendizaje)
                                 </p>
+                                <div class="dropzone" data-col="2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                </div>
                             </div>
                             <div class="item-columna">
                                 <strong>
@@ -130,24 +134,26 @@
                                 <p>
                                     Proporcionar múltiples formas de implicación (el porqué del aprendizaje)
                                 </p>
+                                <div class="dropzone" data-col="3" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="emparejamiento-columna">
+                    <div id="columna_b" class="emparejamiento-columna">
                         <h4 class="text-center">Forma de aplicar el principio</h4>
                         <small class="title-columna">Columna B</small>
                         <div>
-                            <div class="item-columna">
+                            <div class="item-columna" data-col="3" draggable="true" ondragstart="drag(event)" ondragend="dragend(event)"  id="response1">
                                 <p>
                                     Personalizar y contextualizar las actividades teniendo en cuenta los intereses de los estudiantes
                                 </p>
                             </div>
-                            <div class="item-columna">
+                            <div class="item-columna" data-col="1" draggable="true" ondragstart="drag(event)" ondragend="dragend(event)" id="response2">
                                 <p>
                                     La información se le presenta al estudiante con diferente tamaño del texto, de la letra, las imágenes o el tipo de fuente. Se utilizan diagramas y gráficos.
                                 </p>
                             </div>
-                            <div class="item-columna">
+                            <div class="item-columna" data-col="2" draggable="true" ondragstart="drag(event)"  ondragend="dragend(event)"  id="response3">
                                 <p>
                                     Proporcionar alternativas de flexibilización en los tiempos, formas y medios para que los estudiantes realicen sus actividades o presenten tareas y evaluaciones.
                                 </p>
@@ -155,6 +161,9 @@
                         </div>
                     </div>
                 </div>
+                <br>
+                <br>
+                <a href="" class="btn btn-ova center" onclick="resetDragAndDrop(event)">Reiniciar Actividad</a>
             </div>
             <div id="explica">
                 <h2 tabindex="2">Diseño Universal de Aprendizaje - DUA</h2>

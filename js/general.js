@@ -198,7 +198,7 @@ function evaluatedQuestions() {
         } else {
 
             responseContainer.classList.add('warning');
-            console.log(responseContainer.childNodes);
+            // console.log(responseContainer.childNodes);
             responseContainer.childNodes[1].innerHTML = "Incorrecto";
 
             let textAnswer = "Verdadero";
